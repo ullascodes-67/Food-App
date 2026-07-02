@@ -256,8 +256,21 @@ const Food = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-10 py-6">
-      {foodData.map((item, id) => {
+    <div
+      className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        xl:grid-cols-4
+        gap-6
+        justify-items-center
+        px-4
+        md:px-10
+        py-6
+      "
+    >
+      {foodData.map((item) => {
         return (
           <Card
             key={item.id}
