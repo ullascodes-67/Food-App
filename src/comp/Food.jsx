@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-const Food = () => {
+const Food = ({ selectedCat, cart, setCart }) => {
   const [data, setData] = useState([]);
   const foodData = [
     {
@@ -146,7 +146,7 @@ const Food = () => {
     {
       id: 15,
       name: "Peri Peri Fries",
-      category: "Sides",
+      category: "Fries",
       price: 159,
       rating: 4.8,
       deliveryTime: "15-20 min",
@@ -246,7 +246,7 @@ const Food = () => {
     {
       id: 25,
       name: "Cheese Fries",
-      category: "Sides",
+      category: "Fries",
       price: 169,
       rating: 4.7,
       deliveryTime: "15-20 min",
@@ -254,6 +254,13 @@ const Food = () => {
         "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/08/chili-cheese-fries.jpg",
     },
   ];
+  let filteredFood =
+    selectedCat === "All"
+      ? foodData
+      : foodData.filter((item) => {
+          return item.category === selectedCat;
+          console.log(item.category === selectedCat);
+        });
 
   return (
     <div
@@ -270,17 +277,8 @@ const Food = () => {
         py-6
       "
     >
-      {foodData.map((item) => {
-        return (
-          <Card
-            key={item.id}
-            img={item.image}
-            name={item.name}
-            rating={item.rating}
-            time={item.deliveryTime}
-            price={item.price}
-          />
-        );
+      {filteredFood.map((item) => {
+        return <Card item={item} setCart={setCart} cart={cart}/>;
       })}
     </div>
   );
