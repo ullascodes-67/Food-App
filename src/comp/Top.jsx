@@ -2,7 +2,7 @@ import React from "react";
 import burger from "../assets/burger.png";
 import "remixicon/fonts/remixicon.css";
 
-const Top = () => {
+const Top = ({ cart, setCartClick, cartClick }) => {
   return (
     <div className="bg-white shadow-md sticky top-0 z-50">
       <div className="px-5 md:px-10 py-4">
@@ -19,22 +19,31 @@ const Top = () => {
           </div>
 
           {/* Search */}
-          <div className="order-3 md:order-2 w-full md:w-[600px] relative">
+          <div
+            className={`order-3 md:order-2 w-full md:w-[600px] relative  ${cartClick ? "hidden" : "block"}`}
+          >
             <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
 
             <input
               type="text"
               placeholder="Search food..."
-              className="w-full bg-gray-100 rounded-full py-3 pl-11 pr-4 outline-none border-2 border-transparent focus:border-orange-400"
+              className={
+                "w-full bg-gray-100 rounded-full py-3 pl-11 pr-4 outline-none border-2 border-transparent focus:border-orange-400"
+              }
             />
           </div>
 
           {/* Cart */}
-          <button className="order-2 md:order-3 relative text-orange-500 text-3xl">
-            <i className="ri-shopping-cart-2-fill"></i>
+          <button
+            onClick={() => {
+              cartClick ? setCartClick(false) : setCartClick(true);
+            }}
+            className="order-2 md:order-3 relative text-orange-500 text-3xl"
+          >
+            <i className="ri-shopping-cart-2-fill "></i>
 
             <span className="absolute -top-1 -right-2 bg-red-500 text-white w-5 h-5 rounded-full text-[10px] flex items-center justify-center">
-              0
+              {cart.length}
             </span>
           </button>
         </div>

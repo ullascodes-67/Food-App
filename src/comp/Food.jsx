@@ -10,6 +10,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Burger",
       price: 199,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image:
         "https://thetastefulpantry.com/wp-content/uploads/2024/02/Classic-Beef-Burger-feature-1200x628-2.png",
@@ -20,6 +21,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pizza",
       price: 299,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "25-30 min",
       image:
         "https://static.vecteezy.com/system/resources/previews/020/222/733/large_2x/italian-pizza-margherita-with-tomato-sauce-mozzarella-cheese-basil-on-a-dark-concrete-background-pizza-recipe-and-menu-free-photo.jpg",
@@ -30,6 +32,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Sides",
       price: 129,
       rating: 4.6,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://www.thespruceeats.com/thmb/IHKuXcx3uUI1IWkM_cnnQdFH-zQ=/3485x2323/filters:fill(auto,1)/how-to-make-homemade-french-fries-2215971-hero-01-02f62a016f3e4aa4b41d0c27539885c3.jpg",
@@ -40,6 +43,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Wraps",
       price: 219,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image:
         "https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Wrap.jpg",
@@ -50,6 +54,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Dessert",
       price: 199,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://gustotv.com/wp-content/uploads/2025/10/GSE_1012_SyrupSoakedFriedDoughSpiralsIndia_4k_16x9.jpg",
@@ -60,6 +65,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pizza",
       price: 349,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "30-35 min",
       image:
         "https://thelionsroarmhsn.com/wp-content/uploads/2015/04/Pepperoni_1.jpg",
@@ -69,6 +75,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       name: "Chicken Nuggets",
       category: "Sides",
       price: 189,
+      quantity: 1,
       rating: 4.8,
       deliveryTime: "20-25 min",
       image:
@@ -80,6 +87,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Burger",
       price: 229,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image: "https://images3.alphacoders.com/138/thumb-1920-1386826.webp",
     },
@@ -89,6 +97,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pasta",
       price: 269,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "25-30 min",
       image:
         "https://res.cloudinary.com/norgesgruppen/images/c_scale,dpr_auto,f_auto,q_auto:eco,w_1600/tulcxcntmwnys5ndgqvk/pasta-alfredo",
@@ -99,6 +108,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Drinks",
       price: 149,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "10-15 min",
       image:
         "https://www.robinage.com/wp-content/uploads/2023/05/CHOCOLATE-HAZELNUT-MILKSHAKE.jpg",
@@ -109,6 +119,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pizza",
       price: 379,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "30-35 min",
       image:
         "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/02/bbq-chicken-pizza-1.jpg",
@@ -119,6 +130,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Salad",
       price: 179,
       rating: 4.6,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://www.inspiredtaste.net/wp-content/uploads/2025/01/Chicken-Caesar-Salad-Recipe.jpg",
@@ -129,6 +141,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Burger",
       price: 299,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "25-30 min",
       image:
         "https://thumbs.dreamstime.com/b/cinematic-black-white-long-exposure-gourmet-double-burger-capturing-dramatic-nighttime-ambiance-captivating-360391250.jpg",
@@ -139,6 +152,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Dessert",
       price: 229,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://noobrecipes.com/wp-content/uploads/2025/11/Red-Velvet-Cake.jpg",
@@ -149,6 +163,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Fries",
       price: 159,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://static.vecteezy.com/system/resources/thumbnails/038/186/809/small_2x/ai-generated-crispy-french-fries-crunchy-salty-tasty-with-cinematic-light-and-blur-background-ai-generated-photo.jpg",
@@ -159,6 +174,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pizza",
       price: 319,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "30-35 min",
       image:
         "https://harekrishnarecipes.com/wp-content/uploads/2024/08/Vegetable-Supreme-Pizza-Recipe.webp",
@@ -169,6 +185,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Wraps",
       price: 209,
       rating: 4.6,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image:
         "https://img.freepik.com/fotos-premium/kolkatastyle-paneer-kathi-roll-eine-klassische-cottage-kaese-wrap_861171-11514.jpg?semt=ais_hybrid&w=740",
@@ -179,6 +196,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Salad",
       price: 189,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://initiativenetwork.org/wp-content/uploads/2024/06/Origins-of-Greek-Salad.jpg",
@@ -189,6 +207,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pasta",
       price: 289,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "25-30 min",
       image:
         "https://img.freepik.com/premium-photo/fresh-pasta-with-hearty-bolognese-parmesan-cheese-table-cinematic-pasta-close-up_744422-13971.jpg",
@@ -199,6 +218,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Sides",
       price: 249,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image:
         "https://img.freepik.com/premium-photo/perfect-view-close-up-crispy-chicken-tenders-with-blur-background-cinematic_358001-12894.jpg",
@@ -209,6 +229,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Dessert",
       price: 99,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "10-15 min",
       image:
         "https://static.vecteezy.com/system/resources/thumbnails/027/718/090/small_2x/sweet-chocolate-donut-with-cherry-generative-ai-photo.jpg",
@@ -219,6 +240,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Burger",
       price: 249,
       rating: 4.8,
+      quantity: 1,
       deliveryTime: "20-25 min",
       image:
         "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/air_fryer_cblt_burger_03517_16x9.jpg",
@@ -229,6 +251,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Pasta",
       price: 249,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "25-30 min",
       image:
         "https://olivesandfeta.blog/wp-content/uploads/2025/04/macaroni-and-cheese-recipe-1744427001.jpg",
@@ -239,6 +262,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Drinks",
       price: 159,
       rating: 4.9,
+      quantity: 1,
       deliveryTime: "10-15 min",
       image:
         "https://iliveforgreens.com/wp-content/uploads/2023/04/Strawberry-Smoothie-for-Weight-Loss-2048x1363.jpg",
@@ -249,6 +273,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       category: "Fries",
       price: 169,
       rating: 4.7,
+      quantity: 1,
       deliveryTime: "15-20 min",
       image:
         "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/08/chili-cheese-fries.jpg",

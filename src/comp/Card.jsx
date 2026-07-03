@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { use } from "react";
 
 const Card = ({ item, setCart, cart }) => {
+  // let [Bg_col, setBg_col] = useState("bg-orange-500 text-white");
+  // const [btn_value, setBtn_value] = useState("Add To Cart");
+  const alreadyExists = cart.some((food) => food.id === item.id);
   return (
     <div className="w-full max-w-[350px] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       <img src={item.image} alt="" className="object-cover h-44 w-full" />
@@ -16,15 +20,24 @@ const Card = ({ item, setCart, cart }) => {
         <h2 className="text-xl text-green-700">₹{item.price}</h2>
 
         <button
-          className="bg-orange-500 w-full rounded-lg py-1.5 text-lg mt-2 text-white active:bg-orange-600"
+          className={` ${alreadyExists ? "bg-white text-orange-500 border-orange border-1" : "bg-orange-500 text-white"} w-full  rounded-lg py-1.5 text-lg mt-2   `}
           onClick={() => {
-            let temp = [...cart];
-            temp.push(item);
-            setCart(temp);
-            console.log(cart);
+            if (alreadyExists) {
+              let temp = [...cart];
+              let index = cart.findIndex((food) => food.id === item.id);
+              temp.splice(index, 1);
+              setCart(temp);
+              console.log(cart);
+            } else {
+              let temp = [...cart];
+              temp.push(item);
+
+              setCart(temp);
+              console.log(cart);
+            }
           }}
         >
-          Add To Cart
+          {alreadyExists ? "Remove From Cart" : "Add To Cart"}
         </button>
       </div>
     </div>
