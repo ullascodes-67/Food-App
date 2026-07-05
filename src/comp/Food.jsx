@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-const Food = ({ selectedCat, cart, setCart }) => {
+const Food = ({ selectedCat, cart, setCart, search }) => {
   const [data, setData] = useState([]);
   const foodData = [
     {
@@ -279,13 +279,20 @@ const Food = ({ selectedCat, cart, setCart }) => {
         "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/08/chili-cheese-fries.jpg",
     },
   ];
-  let filteredFood =
-    selectedCat === "All"
-      ? foodData
-      : foodData.filter((item) => {
-          return item.category === selectedCat;
-          console.log(item.category === selectedCat);
-        });
+  let filteredFood = [];
+  if (search === "") {
+    filteredFood =
+      selectedCat === "All"
+        ? foodData
+        : foodData.filter((item) => {
+            return item.category === selectedCat;
+            console.log(item.category === selectedCat);
+          });
+  } else {
+    filteredFood = foodData.filter((item) => {
+      return item.name.toLocaleLowerCase().includes(search.toLowerCase());
+    });
+  }
 
   return (
     <div
@@ -303,7 +310,7 @@ const Food = ({ selectedCat, cart, setCart }) => {
       "
     >
       {filteredFood.map((item) => {
-        return <Card item={item} setCart={setCart} cart={cart}/>;
+        return <Card item={item} setCart={setCart} cart={cart} />;
       })}
     </div>
   );

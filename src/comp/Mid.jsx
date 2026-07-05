@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Mid = ({ selectedCat, setSelectedCat }) => {
+const Mid = ({ selectedCat, setSelectedCat, }) => {
   const Categories = [
     "All",
     "Burger",

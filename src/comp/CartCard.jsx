@@ -55,13 +55,45 @@ const CartCard = ({ item, cart, setCart }) => {
             </button>
 
             <div className="flex items-center gap-4">
-              <button className="w-10 h-10 border rounded-lg text-xl hover:bg-orange-500 hover:text-white transition">
+              <button
+                className="w-10 h-10 border rounded-lg text-xl hover:bg-orange-500 hover:text-white transition"
+                onClick={() => {
+                  let temp = [...cart];
+
+                  const index = temp.findIndex((food) => food.id === item.id);
+
+                  if (temp[index].quantity > 1) {
+                    temp[index] = {
+                      ...temp[index],
+                      quantity: temp[index].quantity - 1,
+                    };
+
+                    setCart(temp);
+                  }
+                }}
+              >
                 -
               </button>
 
               <span className="text-xl font-bold">{item.quantity}</span>
 
-              <button className="w-10 h-10 border rounded-lg text-xl hover:bg-orange-500 hover:text-white transition">
+              <button
+                className="w-10 h-10 border rounded-lg text-xl hover:bg-orange-500 hover:text-white transition"
+                onClick={() => {
+                  let temp = [...cart];
+
+                  const index = temp.findIndex((food) => food.id === item.id);
+
+                  if (temp[index].quantity < 10) {
+                    temp[index] = {
+                      ...temp[index],
+                      quantity: temp[index].quantity + 1,
+                    };
+
+                    setCart(temp);
+                  }
+                }}
+              >
                 +
               </button>
             </div>

@@ -2,13 +2,25 @@ import React from "react";
 import burger from "../assets/burger.png";
 import "remixicon/fonts/remixicon.css";
 
-const Top = ({ cart, setCartClick, cartClick }) => {
+const Top = ({
+  cart,
+  setCartClick,
+  cartClick,
+  search,
+  setSearch,
+  setSelectedCat,
+}) => {
   return (
     <div className="bg-white shadow-md sticky top-0 z-50">
       <div className="px-5 md:px-10 py-4">
         <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-4">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            onClick={() => {
+              cartClick ? setCartClick(false) : setCartClick(false);
+            }}
+          >
             <img src={burger} alt="" className="w-12 h-12" />
 
             <div>
@@ -22,15 +34,25 @@ const Top = ({ cart, setCartClick, cartClick }) => {
           <div
             className={`order-3 md:order-2 w-full md:w-[600px] relative  ${cartClick ? "hidden" : "block"}`}
           >
-            <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-
             <input
               type="text"
               placeholder="Search food..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                if (search !== "") setSelectedCat("All");
+              }}
               className={
-                "w-full bg-gray-100 rounded-full py-3 pl-11 pr-4 outline-none border-2 border-transparent focus:border-orange-400"
+                "w-full bg-gray-100 rounded-full py-3 pl-5 pr-4 outline-none border-2 border-transparent focus:border-orange-400"
               }
             />
+            <i
+              className={`ri-search-line absolute right-5 top-1/2 -translate-y-1/2 text-gray-500 ${search == "" ? "block" : "hidden"}`}
+            ></i>
+            <i
+              className={`ri-close-large-line absolute right-5 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer  ${search == "" ? "hidden" : "block"}`}
+              onClick={() => setSearch("")}
+            ></i>
           </div>
 
           {/* Cart */}
