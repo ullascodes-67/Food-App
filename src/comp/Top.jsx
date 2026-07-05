@@ -24,7 +24,7 @@ const Top = ({
             <img src={burger} alt="" className="w-12 h-12" />
 
             <div>
-              <h1 className="text-2xl font-bold text-orange-500">Foodie</h1>
+              <h1 className="text-2xl font-bold text-orange-500">Keerthi Foods</h1>
 
               <p className="text-xs text-gray-500">Good Food, Good Mood</p>
             </div>
